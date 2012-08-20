@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Velociraptor Owners</title>
+	<!--Ext JS-->
+	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	<script src="assets/extjs/ext-all-debug.js"></script>
+	<!--Application JS-->
+	<script src="assets/grid.js"></script>
+	<script>Ext.app.REMOTING_API = {
+		// Set url corresponding to:  config.middleware.use Rails::ExtJS::Direct::RemotingProvider, "/direct"
+		url: '/direct',
+		type: 'remoting',
+		actions: {
+		    Owner : [
+		        {name: 'load', len: 1},
+		        {name: 'save', len: 2},
+		        {name: 'create', len: 1},
+		        {name: 'destroy', len: 1}
+		    ]
+		}
+	};
+	</script>
+<!--
+	<script src="php/api.php"></script>
+-->
+</head>
+<body>
+</body>
+</html>
