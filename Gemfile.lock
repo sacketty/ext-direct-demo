@@ -1,3 +1,8 @@
+PATH
+  remote: ~/workspace/github/direct-rails
+  specs:
+    rails-extjs-direct (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,7 +76,6 @@ GEM
       activesupport (= 3.2.7)
       bundler (~> 1.0)
       railties (= 3.2.7)
-    rails-extjs-direct (0.0.15)
     railties (3.2.7)
       actionpack (= 3.2.7)
       activesupport (= 3.2.7)
@@ -111,7 +115,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 3.2.7)
-  rails-extjs-direct
+  rails-extjs-direct!
   sass-rails (~> 3.2.3)
   therubyracer
   uglifier (>= 1.0.3)

@@ -1,0 +1,18 @@
+body {
+    background: #ededed;
+}
+
+.grid {
+    margin: 0 auto;
+    position: relative;
+    width: 700px;
+    margin-top: 5px;
+}
+
+.add {
+    background: url('add.png');
+}
+
+.delete {
+    background: url('delete.png');
+}

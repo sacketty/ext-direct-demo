@@ -1,10 +1,15 @@
 Raptor::Application.routes.draw do
+  resources :owners
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'owner/read' => 'owners#index', :format=>:json
+  match 'owner/create' => 'owners#create', :format=>:json
+  match 'owner/destroy' => 'owners#destroy', :format=>:json
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

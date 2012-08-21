@@ -4,7 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Velociraptor Owners</title>
 	<!--Ext JS-->
-	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	<link rel="stylesheet" type="text/css" href="assets/extjs/resources/css/ext-all.css">
+	<link rel="stylesheet" type="text/css" href="assets/raptor.css">
 	<script src="assets/extjs/ext-all-debug.js"></script>
 	<!--Application JS-->
 	<script src="assets/grid.js"></script>
@@ -14,9 +15,9 @@
 		type: 'remoting',
 		actions: {
 		    Owner : [
-		        {name: 'load', len: 1},
-		        {name: 'save', len: 2},
 		        {name: 'create', len: 1},
+		        {name: 'read', len: 1},
+		        {name: 'update', len: 1},
 		        {name: 'destroy', len: 1}
 		    ]
 		}
