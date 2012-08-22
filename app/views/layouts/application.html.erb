@@ -5,6 +5,20 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script>Ext.app.REMOTING_API = {
+	// Set url corresponding to:  config.middleware.use Rails::ExtJS::Direct::RemotingProvider, "/direct"
+	url: '/direct',
+	type: 'remoting',
+	actions: {
+	    Owner : [
+	        {name: 'create', len: 1},
+	        {name: 'read', len: 1},
+	        {name: 'update', len: 1},
+	        {name: 'destroy', len: 1}
+	    ]
+	}
+  };
+  </script>
 </head>
 <body>
 
