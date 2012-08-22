@@ -7,8 +7,9 @@ Raptor::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-  match 'owner/read' => 'owners#index', :format=>:json
   match 'owner/create' => 'owners#create', :format=>:json
+  match 'owner/read' => 'owners#index', :format=>:json
+  match 'owner/update' => 'owners#update', :format=>:json
   match 'owner/destroy' => 'owners#destroy', :format=>:json
 
   # Sample of named route:

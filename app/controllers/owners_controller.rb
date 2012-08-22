@@ -82,15 +82,30 @@ class OwnersController < ApplicationController
   # PUT /owners/1
   # PUT /owners/1.json
   def update
-    @owner = Owner.find(params[:id])
+    data = params[:data] ? params[:data] : params
+    id = data.delete('id')
+    @owner = Owner.find(id)
 
     respond_to do |format|
-      if @owner.update_attributes(params[:owner])
+      if @owner.update_attributes(data)
         format.html { redirect_to @owner, notice: 'Owner was successfully updated.' }
-        format.json { head :no_content }
+        format.json do
+          res = XResponse.new(@xrequest)
+          res.status = true
+          res.message = "Owner#update"
+          res.result = {success: true}
+          render(:json => res)
+        end
       else
         format.html { render action: "edit" }
-        format.json { render json: @owner.errors, status: :unprocessable_entity }
+        format.json do
+          res = XResponse.new(@xrequest)
+          res.status = false
+          res.message = @owner.errors.full_messages
+          res.type = 'exception'
+          res.errors = @owner.errors
+          render(:json => res)
+        end
       end
     end
   end

@@ -155,4 +155,9 @@ Ext.onReady(function() {
 		}],
 		renderTo: Ext.getBody()
 	});
+
+	grid.on('edit', function(editor, e) {
+	    // commit the changes right after editing finished
+	    editor.store.update();
+	});
 });
